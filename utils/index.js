@@ -10,9 +10,9 @@ try {
 };
 
 class Anime {
-constructor(title, actor = "Not specified") {
+constructor(title, char = "Not specified") {
     this.title = title;
-    this.actor = actor;
+    this.char = char;
 }
 add() {
     AnimeArr.push(this);
