@@ -13,7 +13,7 @@ const App = () =>{
             break;
         case "add multi":
             const Anime1 = new Anime(args.title1,args.actor1);
-            const movie2 = new Anime(args.title2,args.actor2);
+            const Anime2 = new Anime(args.title2,args.actor2);
             Anime1.add();
             Anime2.add();
             Anime1.save();
