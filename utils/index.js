@@ -1,28 +1,28 @@
 const fs = require("fs");
-let movieArr;
+let AnimeArr;
 
-const pullMovieData = () => {
+const pullAnimeData = () => {
 try {
-    movieArr = JSON.parse(fs.readFileSync("./storage.json"));
+    AnimeArr = JSON.parse(fs.readFileSync("./storage.json"));
 } catch (error) {
-    movieArr = [];
+    AnimeArr = [];
 }
 };
 
-class Movie {
+class Anime {
 constructor(title, actor = "Not specified") {
     this.title = title;
     this.actor = actor;
 }
 add() {
-    movieArr.push(this);
+    AnimeArr.push(this);
 }
 list() {
-    console.log(movieArr);
+    console.log(AnimeArr);
 }
 save() {
-    fs.writeFileSync("./storage.json", JSON.stringify(movieArr));
+    fs.writeFileSync("./storage.json", JSON.stringify(AnimeArr));
 }
 }
 
-module.exports = { Movie, pullMovieData };
+module.exports = { Anime, pullAnimeData };

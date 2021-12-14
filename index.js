@@ -1,24 +1,24 @@
 const yargs = require("yargs");
-const {Movie,pullMovieData} = require("./utils");
+const {Anime,pullAnimeData} = require("./utils");
 const args = yargs.argv;
 
 const App = () =>{
-    pullMovieData();
+    pullAnimeData();
     switch(args.command){
         case "add":
-            const newMovie = new Movie(args.title,args.actor)
-            newMovie.add();
-            newMovie.list();
-            newMovie.save();
+            const newAnime = new Anime(args.title,args.actor)
+            newAnime.add();
+            newAnime.list();
+            newAnime.save();
             break;
         case "add multi":
-            const movie1 = new Movie(args.title1,args.actor1);
-            const movie2 = new Movie(args.title2,args.actor2);
-            movie1.add();
-            movie2.add();
-            movie1.save();
-            movie2.save();
-            movie1.list();
+            const Anime1 = new Anime(args.title1,args.actor1);
+            const movie2 = new Anime(args.title2,args.actor2);
+            Anime1.add();
+            Anime2.add();
+            Anime1.save();
+            Anime2.save();
+            Anime1.list();
             break;
             default:
                 console.log("Incorrect Command");
